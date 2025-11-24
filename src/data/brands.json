@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Economical",
+    "color": "#0A8A3A",
+    "title": "Ghar Basai Hotel",
+    "desc1": "Comfortable",
+    "desc2": "economical hotels .",
+    "desc3": "affordable prices",
+    "image": "https://www.princehotels.com/wp-content/uploads/2019/04/aboutslider2-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Prime",
+    "color": "#252B63",
+    "title": "Ghar Basai Hotel Prime",
+    "desc1": "Luxury rooms with premium service",
+    "desc2": "and modern amenities ",
+    "desc3": "with all essential facilities",
+    "image": "https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Express",
+    "color": "#463F92",
+    "title": "Ghar Basai Hotel Express",
+    "desc1": "Quick and budget-friendly stays",
+    "desc2": "perfect for short business.",
+    "desc3": "weekend trips",
+    "image": "https://www.travelandleisure.com/thmb/MgauergJvekBMULHZUoB9M-xWLo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-royal-monceau-raffles-WHERETOSTAYPARIS1124-b8522e6834bb4b56a51ba0bf165f44c0.jpg"
+  }
+]

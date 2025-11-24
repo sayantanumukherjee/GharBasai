@@ -1,0 +1,128 @@
+[
+  {
+    "id": 101,
+    "destinationId": 2,
+    "name": "The Elgin Darjeeling",
+    "price": 4800,
+    "rating": 4.6,
+    "ratingCount": 238,
+    "place": "Darjeeling, West Bengal",
+    "availability": 5,
+    "images": [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/11/2d/1a/caption.jpg?w=900&h=-1&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/d3/23/fd/hotel-pink-mountain.jpg?w=1200&h=-1&s=1"
+    ]
+  },
+  {
+    "id": 102,
+    "destinationId": 2,
+    "name": "Mayfair Darjeeling",
+    "price": 5200,
+    "rating": 4.8,
+    "ratingCount": 312,
+    "place": "Darjeeling, West Bengal",
+    "availability": 3,
+    "images": [
+      "https://i1.wp.com/udaanhotels.com/wp-content/uploads/2022/03/Udaan-Nirvana-Resort-Darjeeling.jpg?fit=1024%2C576&ssl=1",
+      "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201803231336268804-3fdea6cb-1847-4302-8066-311344ca77ed.jpg"
+    ]
+  },
+  {
+    "id": 103,
+    "destinationId": 3,
+    "name": "Hotel Sea Hawk",
+    "price": 3500,
+    "rating": 4.4,
+    "ratingCount": 189,
+    "place": "Digha, West Bengal",
+    "availability": 4,
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/404837972.jpg?k=6df7e3c0b9b9d17811246fc691f99c53caaad5c269b1be225fe7217f859585eb&o=",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/10804/sropheprlfki.jpg"
+    ]
+  },
+  {
+    "id": 104,
+    "destinationId": 3,
+    "name": "Cygnett Inn Sea View",
+    "price": 4200,
+    "rating": 4.2,
+    "ratingCount": 156,
+    "place": "Digha, West Bengal",
+    "availability": 2,
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max300/468595584.jpg?k=c6daa302709280e8ab7814b66b238afaa5725b0d27084748a19a185085913531&o=",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9d/91/01/cygnett-inn-sea-view.jpg?w=1200&h=-1&s=1"
+    ]
+  },
+  {
+    "id": 105,
+    "destinationId": 4,
+    "name": "Summit Denzong Hotel & Spa",
+    "price": 5600,
+    "rating": 4.7,
+    "ratingCount": 271,
+    "place": "Gangtok, Sikkim",
+    "availability": 5,
+    "images": [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/f7/e2/42/exterior.jpg?w=1200&h=-1&s=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/590854938.webp?k=486177f6b02b805e8c38be581e8f94d7ec18d1f15771a69296f9f51c8b15ed1e&o="
+    ]
+  },
+  {
+    "id": 106,
+    "destinationId": 4,
+    "name": "The Royal Plaza Gangtok",
+    "price": 5900,
+    "rating": 4.3,
+    "ratingCount": 204,
+    "place": "Gangtok, Sikkim",
+    "availability": 4,
+    "images": [
+      "https://r1imghtlak.mmtcdn.com/74476ae8c2c811e6ba7902bf5ac07431.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/27/63/75/luxuary-mountain-view.jpg?w=1200&h=-1&s=1"
+    ]
+  },
+  {
+    "id": 107,
+    "destinationId": 5,
+    "name": "Mayfair Heritage Puri",
+    "price": 6100,
+    "rating": 4.5,
+    "ratingCount": 298,
+    "place": "Puri, Odisha",
+    "availability": 5,
+    "images": [
+      "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201806011229463996-3ae43274b24211e9be6b0242ac140005.jpg",
+      "https://en.hotel-okinawa.com/wp-content/themes/hotelokinawa/img/pompompurin_double_03.jpg"
+    ]
+  },
+  {
+    "id": 108,
+    "destinationId": 5,
+    "name": "Sterling Puri",
+    "price": 4700,
+    "rating": 4.1,
+    "ratingCount": 167,
+    "place": "Puri, Odisha",
+    "availability": 3,
+    "images": [
+      "https://gos3.ibcdn.com/8502fbd9-f563-4324-b34d-1bde5c78fa82.jpg",
+      "https://hotelpulinpuri.com/my-admin/img/rooms/room-3.jpg"
+    ]
+  },
+  {
+    "id": 109,
+    "destinationId": 1,
+    "name": "Nearby Comfort Stay",
+    "price": 2800,
+    "rating": 4.0,
+    "ratingCount": 94,
+    "place": "Near You",
+    "availability": 5,
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/604155459.webp?k=b74992052c555fb845e3b8c44a4a06f6745e9da5557a66583e42a1738273e2b6&o=",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/a2/4e/0e/hotel-facade.jpg?w=1200&h=-1&s=1"
+    ]
+  }
+]

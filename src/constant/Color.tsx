@@ -1,0 +1,13 @@
+export default {
+  BTN_GREEN: '#006229',  // Ghar Basai green
+  TEXT_RED: '#E02104',
+  WHITE: '#FFFFFF',
+  BLACK: '#000000',
+  GRAY: '#DEDEDE',
+  BTN_BORDER:'#E3E3E3',
+  SKY_BLUE:'#948EFFCC',
+  ROSE_BACK:'#FFE4E0',
+  NAVY_BLUE:'#282561',
+  LAVENDER_BLUE:'#CDCAFF',
+  LIGHT_GREEN:'#90EE90',
+};

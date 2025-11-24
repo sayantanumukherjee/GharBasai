@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Near You",
+    "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+  },
+  {
+    "id": 2,
+    "name": "Darjeeling",
+    "image": "https://www.visittnt.com/blog/wp-content/uploads/2019/08/darjeeling.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Digha",
+    "image": "https://i.ytimg.com/vi/7PTaHmj_oXI/maxresdefault.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gangtok",
+    "image": "https://1.bp.blogspot.com/-QC0QQK-slGI/VFIMQWgF6UI/AAAAAAAAFgs/k2yn0Vpsdbo/s1600/M%2BG%2Broad2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Puri",
+    "image": "https://i.pinimg.com/originals/96/5b/af/965baf70b654547485b315aab3a149a8.jpg"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Alex William",
+    "message": "Lorem ipsum dolor amet consectetur. Sem integer sit es adipiscing egestas id neque nunc.",
+    "hotel": "Ghar Basai Hotel Bliss",
+    "place": "Gangtok",
+    "date": "1 Jan"
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "message": "Stay was excellent and very comfortable. Highly recommended for families.",
+    "hotel": "Ghar Basai Hilltop Resort",
+    "place": "Darjeeling",
+    "date": "15 Feb"
+  },
+  {
+    "id": 3,
+    "name": "Rahul Mehta",
+    "message": "Amazing hospitality and beautiful location. Will visit again!",
+    "hotel": "Ghar Basai Sunrise Inn",
+    "place": "Sikkim",
+    "date": "10 Mar"
+  },
+  {
+    "id": 4,
+    "name": "Sneha Verma",
+    "message": "The rooms were clean and the staff was incredibly polite. Loved the mountain view!",
+    "hotel": "Ghar Basai Evergreen Stay",
+    "place": "Manali",
+    "date": "21 Mar"
+  },
+  {
+    "id": 5,
+    "name": "Rohit Das",
+    "message": "Best experience ever! The food and ambiance were just perfect for our family vacation.",
+    "hotel": "Ghar Basai Ocean Pearl",
+    "place": "Goa",
+    "date": "2 Apr"
+  },
+  {
+    "id": 6,
+    "name": "Neha Kapoor",
+    "message": "Peaceful environment with top-notch service. Definitely coming back again.",
+    "hotel": "Ghar Basai Pine View Retreat",
+    "place": "Shimla",
+    "date": "12 Apr"
+  }
+]
