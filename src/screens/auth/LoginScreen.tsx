@@ -13,6 +13,8 @@ import Terns_Service from './logincomponents/Terns_Service';
 const LoginScreen = () => {
   
   const [phonenumber,setPhonenumber]=useState('')
+
+  
     
   return (
     <View style={styles.LoginScreen}>

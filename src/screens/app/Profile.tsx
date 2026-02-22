@@ -7,15 +7,20 @@ import UserDetails from './profilecomponent/UserDetails'
 import ProfileOptionList from './profilecomponent/ProfileOptionList'
 import Appratting from './searchscreencomponents/Appratting'
 import WhatsAppToggle from './profilecomponent/WhatsAppToggle'
+import { useRoute } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
 
 const Profile = () => {
+  const route =useRoute()
+  const user = useSelector(state => state.user.userData)
+
   return (
     <View>
       <Statusbar hight={35} backgroundColor={Color.BTN_GREEN} />
       <ScrollView
         showsVerticalScrollIndicator={false}
       >
-        <UserDetails />
+        <UserDetails user={user} />
 
         <ProfileOptionList />
 

@@ -16,7 +16,7 @@ const BottomTabNavigator = () => {
   
   return (
     <View style={styles.Nav}>
-    <Tab.Navigator screenOptions={({ route }) => ({
+    <Tab.Navigator initialRouteName='SearchScreen' screenOptions={({ route }) => ({
       
         headerShown: false,
         tabBarShowLabel: true,

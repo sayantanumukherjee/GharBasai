@@ -1,6 +1,6 @@
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import { Statusbar } from '../../../../components/framework/boots'
+import { Spacer, Statusbar } from '../../../../components/framework/boots'
 import { useNavigation } from '@react-navigation/native'
 import { Color } from '../../../../constant'
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -14,6 +14,7 @@ import Dob from './PersonalinfoComponents/Dob'
 import Gender from './PersonalinfoComponents/Gender'
 import RelationshipStatus from './PersonalinfoComponents/RelationshipStatus'
 import NavBar from './NavBar'
+import SmallButton from '../../../../components/framework/boots/SmallButton'
 
 
 
@@ -87,13 +88,9 @@ const PersonalinfoScreen = () => {
               <RelationshipStatus />
             </View>
 
+                    <Spacer height={180}/>
+                      <SmallButton hight={40} width={350} backgroundColor={Color.NAVY_BLUE} title="Save" fontSize={15}/>
 
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.btn}>
-                <Text style={styles.btnText}>Save</Text>
-              </TouchableOpacity>
-
-            </View>
 
             
         </ScrollView>

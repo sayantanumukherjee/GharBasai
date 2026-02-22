@@ -1,67 +1,87 @@
 import { Animated, Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { scale } from 'react-native-size-matters'
 import { Color, ImagesAll } from '../../../constant'
 
 
 
 
-const UserDetails = () => {
-    const data = {
-  id: 1,
-  name: 'Download Task',
-  progress: 10
-}
-    const animation = new Animated.Value(data.progress);
+const UserDetails = ({ user }) => {
+    const [progressData, setProgressData] = useState(0)
+    useEffect(()=>{
+        if (!user) {
+    setProgressData(0);
+    return;
+  }
 
-  const widthInterpolated = animation.interpolate({
+  const hasName = Boolean(user.username && String(user.username).trim())
+  const hasEmail = Boolean(user.email && String(user.email).trim())
+  const hasPhone = Boolean(user.contact_number && String(user.contact_number).trim())
+  const hasAddress = Boolean(user.address && String(user.address).trim())
+
+
+
+  const points = (hasName ? 25 : 0) + (hasEmail ? 25 : 0) + (hasPhone ? 25 : 0) +(hasAddress ? 25: 0) 
+
+  setProgressData(points);
+
+}, [user])
+
+const data = {
+    id: 1,
+    name: 'Download Task',
+    progress: progressData
+}
+const animation = new Animated.Value(data.progress);
+
+const widthInterpolated = animation.interpolate({
     inputRange: [0, 100],
     outputRange: ['0%', '100%'],
-  })
-    return (
-        <View style={styles.header}>
-            <ImageBackground
-                source={ImagesAll.PROFILE_BACK_PNL}
-                style={styles.imageBack}
+})
+return (
+    <View style={styles.header}>
+        <ImageBackground
+            source={ImagesAll.PROFILE_BACK_PNL}
+            style={styles.imageBack}
 
-            >
+        >
 
-                <Text style={styles.headerTitle}>Blue</Text>
-                <Text style={styles.subheaderTitle}>A-List Membership</Text>
-
-
-                <View style={styles.profileContener}>
-                    <View style={styles.row}>
-                        <View style={styles.roundedImage}>
-                            <Image source={ImagesAll.PROFILE_IMAGE_DEFAULT} style={styles.profileImagePNG} resizeMode='contain' />
-                        </View>
-                        <View style={styles.userdetail}>
-                            <Text style={styles.userName}>Guest User</Text>
-                            <Text style={styles.PhoneNo}>+91 9641750211</Text>
-                            <Text style={styles.joinDate}>Member since Apr 2025</Text>
+            <Text style={styles.headerTitle}>Blue</Text>
+            <Text style={styles.subheaderTitle}>A-List Membership</Text>
 
 
-                        </View>
+            <View style={styles.profileContener}>
+                <View style={styles.row}>
+                    <View style={styles.roundedImage}>
+                        <Image source={ImagesAll.PROFILE_IMAGE_DEFAULT} style={styles.profileImagePNG} resizeMode='contain' />
+                    </View>
+                    <View style={styles.userdetail}>
+                        <Text style={styles.userName}>{user.first_name}</Text>
+                        <Text style={styles.PhoneNo}>+91 {user.contact_number}</Text>
+                        <Text style={styles.joinDate}>Member since {user.created_at}</Text>
+
 
                     </View>
-                    <View style={{ flex: 1 }}>
-                        
-                            <Text style={styles.text}>{data.progress}% Profile completed</Text>
-                            <View style={styles.progressBar}>
-                                <Animated.View style={[styles.progressFill, { width: widthInterpolated }]} />
-                            </View>
-                            <Text style={styles.progerssText}>Add details for better & personalized booking experience</Text>
-                        </View>
-                    
 
                 </View>
+                <View style={{ flex: 1 }}>
 
-            </ImageBackground>
+                    <Text style={styles.text}>{data.progress}% Profile completed</Text>
+                    <View style={styles.progressBar}>
+                        <Animated.View style={[styles.progressFill, { width: widthInterpolated }]} />
+                    </View>
+                    <Text style={styles.progerssText}>Add details for better & personalized booking experience</Text>
+                </View>
+
+
+            </View>
+
+        </ImageBackground>
 
 
 
-        </View>
-    )
+    </View>
+)
 }
 
 export default UserDetails
@@ -137,26 +157,26 @@ const styles = StyleSheet.create({
         marginTop: scale(15),
         marginLeft: scale(10)
     },
-    text:{
-        marginLeft:scale(20),
-        fontSize:scale(14),
-        fontWeight:700,
-         
+    text: {
+        marginLeft: scale(20),
+        fontSize: scale(14),
+        fontWeight: 700,
+
     },
-    progressBar:{
-        backgroundColor:Color.GRAY,
-        
-        height:scale(2),
-        marginHorizontal:scale(20),
-        marginTop:scale(8)
+    progressBar: {
+        backgroundColor: Color.GRAY,
+
+        height: scale(2),
+        marginHorizontal: scale(20),
+        marginTop: scale(8)
     },
-    progerssText:{
-        fontSize:scale(10),
-        textAlign:'center',
-        marginTop:scale(2)
+    progerssText: {
+        fontSize: scale(10),
+        textAlign: 'center',
+        marginTop: scale(2)
     },
-    progressFill:{
-        backgroundColor:Color.NAVY_BLUE,
-        height:scale(2)
+    progressFill: {
+        backgroundColor: Color.NAVY_BLUE,
+        height: scale(2)
     }
 })

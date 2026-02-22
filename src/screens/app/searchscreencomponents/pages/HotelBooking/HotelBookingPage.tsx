@@ -1,7 +1,7 @@
 import { Dimensions, FlatList, Image, ImageBackground, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View, TextInput, KeyboardAvoidingView } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import { scale } from 'react-native-size-matters'
+import { moderateScale, scale } from 'react-native-size-matters'
 import { Spacer, Statusbar } from '../../../../../components/framework/boots'
 import { Color } from '../../../../../constant'
 import LinearGradient from 'react-native-linear-gradient'
@@ -11,6 +11,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import CheckInOutBox from '../../SearchBox/CheckInOutBox'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import GuestsNo from '../../SearchBox/GuestsNo'
+import  SliderBox  from "react-native-image-slider-box"
 
 
 
@@ -35,39 +36,35 @@ const HotelBookingPage = () => {
         const index = Math.round(event.nativeEvent.contentOffset.x / width);
         setCurrentIndex(index);
     }
-
-
+    
     return (
-            <View style={{ flex: 1 }}>
-                <Statusbar hight={35} backgroundColor={Color.SKY_BLUE} barStyle='dark-content' />
-                <View style={styles.navBar}>
-                    <TouchableOpacity onPress={() => { navigator.navigate('MainApp', { screen: 'SearchScreen' }) }}>
-                        <Ionicons name='chevron-back' size={scale(26)} style={styles.baclicon} />
-                    </TouchableOpacity>
-                    <View style={styles.searchbox}>
-                        <CheckInOutBox color={Color.WHITE} />
-                    </View>
-                    
-
+        <View style={{ flex: 1 }}>
+            <Statusbar hight={35} backgroundColor={Color.SKY_BLUE} barStyle='dark-content' />
+            <View style={styles.navBar}>
+                <TouchableOpacity onPress={() => { navigator.navigate('MainApp', { screen: 'SearchScreen' }) }}>
+                    <Ionicons name='chevron-back' size={scale(26)} style={styles.baclicon} />
+                </TouchableOpacity>
+                <View style={styles.searchbox}>
+                    <CheckInOutBox color={Color.WHITE} />
                 </View>
-                <KeyboardAvoidingView
-                    style={{ flex: 1 }}
-                    behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-                    keyboardVerticalOffset={Platform.OS === 'ios' ? scale(100) : scale(35)}
-                >
+
+
+            </View>
+            <KeyboardAvoidingView
+                style={{ flex: 1 }}
+                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+                keyboardVerticalOffset={Platform.OS === 'ios' ? scale(100) : scale(35)}
+            >
 
 
 
-                    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+                <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
 
-                        <View style={styles.fullContener}>
-
-
-                            <View style={styles.imageContainer}>
+                    <View style={styles.fullContener}>
 
 
-
-                                <FlatList
+                        <View style={styles.imageContainer}>
+                            <FlatList
                                     horizontal
                                     showsHorizontalScrollIndicator={false}
                                     data={hotel.images}
@@ -128,90 +125,95 @@ const HotelBookingPage = () => {
                                     </View>
 
                                 </View>
-                            </View>
-                            <Spacer height={50} />
-                            <View style={styles.travellerdetailscontainner}>
-                                <Text style={styles.title}>Traveller Details</Text>
-                                <Text style={styles.infoText}>All booking communications will be sent here</Text>
 
-                                <View style={{
-                                    justifyContent: 'center',
-                                    alignItems: 'center'
-                                }}>
-                                    <Spacer height={20}/>
-                                    <View style={styles.traverdetailbox}>
 
-                                        <View style={styles.inputBox}>
-                                            <View style={styles.labelBox}>
-                                                <Text style={styles.labelText}>Mobile number</Text>
-                                            </View>
-                                            <Text style={styles.phoneNo}>+91 </Text>
-                                            <TextInput
-                                                keyboardType="number-pad"
-                                                value={mobile}
-                                                onChangeText={setMobile}
-                                                style={styles.imputField}
-                                                maxLength={10}
 
-                                            />
+                        </View>
+                        <Spacer height={50} />
+                        <View style={styles.travellerdetailscontainner}>
+                            <Text style={styles.title}>Traveller Details</Text>
+                            <Text style={styles.infoText}>All booking communications will be sent here</Text>
+
+                            <View style={{
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                                <Spacer height={20} />
+                                <View style={styles.traverdetailbox}>
+
+                                    <View style={styles.inputBox}>
+                                        <View style={styles.labelBox}>
+                                            <Text style={styles.labelText}>Mobile number</Text>
                                         </View>
-                                        <Spacer height={10}/>
+                                        <Text style={styles.phoneNo}>+91 </Text>
+                                        <TextInput
+                                            keyboardType="number-pad"
+                                            value={mobile}
+                                            onChangeText={setMobile}
+                                            style={styles.imputField}
+                                            maxLength={10}
 
-                                        <View style={styles.inputBox}>
-
-                                            <TextInput
-                                                keyboardType="text"
-                                                value={name}
-                                                onChangeText={setName}
-                                                style={styles.imputField}
-                                                placeholder='Enter Full Name'
-                                                
-
-                                            />
-                                        </View>
-                                        <Spacer height={10}/>
-
-                                        <View style={styles.inputBox}>
-
-                                            <TextInput
-                                                keyboardType="email-address"
-                                                value={email}
-                                                onChangeText={setEmail}
-                                                style={styles.imputField}
-                                                placeholder='Enter Email'
-                                                
-
-                                            />
-                                        </View>
-                                        <Spacer height={10}/>
-                                        <GuestsNo/>
-
-
+                                        />
                                     </View>
+                                    <Spacer height={10} />
+
+                                    <View style={styles.inputBox}>
+
+                                        <TextInput
+                                            keyboardType="text"
+                                            value={name}
+                                            onChangeText={setName}
+                                            style={styles.imputField}
+                                            placeholder='Enter Full Name'
+
+
+                                        />
+                                    </View>
+                                    <Spacer height={10} />
+
+                                    <View style={styles.inputBox}>
+
+                                        <TextInput
+                                            keyboardType="email-address"
+                                            value={email}
+                                            onChangeText={setEmail}
+                                            style={styles.imputField}
+                                            placeholder='Enter Email'
+
+
+                                        />
+                                    </View>
+                                    <Spacer height={10} />
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'flex-start' }}>
+                                        <GuestsNo />
+                                    </View>
+
+
                                 </View>
                             </View>
                         </View>
-                        <Spacer height={150} />
-
-
-                    </ScrollView>
-                </KeyboardAvoidingView>
-
-                <SafeAreaView style={{ backgroundColor: Color.WHITE }} edges={['left', 'right', 'bottom']}>
-                    <View style={styles.bottomNavBar}>
-                        <TouchableOpacity style={styles.payathotel}>
-                            <Text style={styles.bookingText}>Pay @Hotel <FontAwesome5 name='rupee-sign' size={15} /> {hotel.price}</Text>
-
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.paynow}>
-                            <Text style={styles.bookingText}>Pay Now <FontAwesome5 name='rupee-sign' size={15} /> {hotel.price}</Text>
-
-                        </TouchableOpacity>
-
                     </View>
-                </SafeAreaView>
+                    <Spacer height={150} />
 
-            </View>
+
+                </ScrollView>
+            </KeyboardAvoidingView>
+
+            <SafeAreaView style={{ backgroundColor: Color.WHITE }} edges={['left', 'right', 'bottom']}>
+                <View style={styles.bottomNavBar}>
+                    <TouchableOpacity style={styles.payathotel}>
+                        <Text style={styles.bookingText}>Pay @Hotel <FontAwesome5 name='rupee-sign' size={15} /> {hotel.price}</Text>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.paynow}>
+                        <Text style={styles.bookingText}>Pay Now <FontAwesome5 name='rupee-sign' size={15} /> {hotel.price}</Text>
+
+                    </TouchableOpacity>
+
+                </View>
+            </SafeAreaView>
+
+        </View>
 
     )
 }
@@ -396,7 +398,8 @@ const styles = StyleSheet.create({
         shadowColor: Color.BLACK,
         elevation: 2,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderRadius: moderateScale(18)
 
 
     },
@@ -414,6 +417,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flexDirection: 'row',
         textAlign: 'center',
+        borderRadius: scale(9)
     },
     imputField: {
         width: scale(260),
@@ -428,8 +432,8 @@ const styles = StyleSheet.create({
         marginLeft: scale(25),
         marginTop: scale(10),
         fontWeight: 700,
-        borderRightWidth:2,
-        borderColor:Color.GRAY
+        borderRightWidth: 2,
+        borderColor: Color.GRAY
     },
     labelBox: {
         position: "absolute",
